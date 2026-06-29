@@ -1,8 +1,5 @@
 # Multi-class Kinetic Traffic Flow Model
 
-## Name
-Multi-class Kinetic Traffic Flow Model
-
 ## Description
 This project provides a numerical implementation of the multi-class kinetic traffic flow model based on a non-local Prigogine-Herman framework, as derived by C. Mezquita-Nieto, P. Goatin, and A. Klar.
 
