@@ -1,14 +1,14 @@
-function A_bar = A_bar_N_classes(U,V,N,m,R)
+function A_bar = A_bar_N_classes(U,V,N,m)
     %% A_BAR_N_CLASSES 
     %       Assembles block interaction matrices generalized across N 
     %       vehicle classes.
     %
     %   SYNTAX:
-    %       A_bar = A_bar_N_classes(U, V, N, m, R)
+    %       A_bar = A_bar_N_classes(U, V, N, m)
     %
     %   INPUTS:
     %       U          - Packed state vector.
-    %       V, N, m, R - Configuration and parameter inputs.
+    %       V, N, m    - Configuration and parameter inputs.
     %
     %   OUTPUTS:
     %       A_bar      - Assembled block-diagonal interaction matrix for N 
@@ -27,7 +27,7 @@ function A_bar = A_bar_N_classes(U,V,N,m,R)
     A_tilde = zeros(N*m,N*m);
     A_stack = [];
     for c = 1:N
-        Ac = Ac_block(fc{c},V,r,m,R(c));
+        Ac = Ac_block(fc{c},V,r,m);
         A_stack = [A_stack; Ac];
     end
 

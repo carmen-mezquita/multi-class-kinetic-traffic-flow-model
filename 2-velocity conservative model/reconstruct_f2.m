@@ -26,7 +26,7 @@ function [f2,rho2] = reconstruct_f2(u2,m,nx,nbc,bc)
     %% CODE:
 
     % u1(1,:) is N_0^1, u1(2,:) is N_1^1
-    % u2(1,:) is N_0^2, u2(2,:) is N_0^2
+    % u2(1,:) is N_0^2, u2(2,:) is N_1^2
     f2(1,:) = 1 - (u2(1,:)./u2(2,:));
     f2(2,:) = u2(1,:).*(1./u2(2,:)-1);
     

@@ -1,10 +1,10 @@
-function Ac = Ac_block(fc,V,r,m,Rc)
+function Ac = Ac_block(fc,V,r,m)
     %% AC_BLOCK 
     %       Evaluates directional non-conservative interaction derivatives 
     %       inside cells.
     %
     %   SYNTAX:
-    %       Ac = Ac_block(fc, V, r, m, Rc)
+    %       Ac = Ac_block(fc, V, r, m)
     %
     %   DESCRIPTION:
     %       Assembles lower-triangular velocity jump blocks handling 
@@ -14,7 +14,7 @@ function Ac = Ac_block(fc,V,r,m,Rc)
     %       fc    - Class distribution.
     %       V     - Velocity vector.
     %       r     - Total density.
-    %       m, Rc - Velocity bins and capacity limit.
+    %       m     - Velocity bins and capacity limit.
     %
     %   OUTPUTS:
     %       Ac    - Lower-triangular velocity jump block matrix.
@@ -24,7 +24,7 @@ function Ac = Ac_block(fc,V,r,m,Rc)
     %% CODE:
 
     Ac = zeros(m,m);
-    if r<Rc
+    if r<1
         denom = max(1-r,1e-12);
         for i = 1:m
             cte = 0;

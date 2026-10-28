@@ -87,7 +87,7 @@ function [I,total_mass,timeline,rho1,rho2,q1,q2] = discvelo_path_conservative(pa
         U_old = [f1; f2]; % Packed matrix representation of state vectors
         
         % Step A: Evaluate path-integral matrix jumps across cellular interfaces
-        I_pi = path_integral_jumps(U_old,V,par.N,m,par.R_eps,par.bc,par.nx,par.nbc);
+        I_pi = path_integral_jumps(U_old,V,par.N,m,par.bc,par.nx,par.nbc);
         
         % Step B: Apply Lax-Friedrichs type path-conservative update step
         U = path_conservative_update(U_old,I_pi,lmbd,par.bc,par.nx,par.nbc,par.inner);
