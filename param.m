@@ -32,7 +32,7 @@ par.nx_inner = 1000; % number of cells in the domain -> road discretization
 par.nbc = 1; % number of cells at the boundaries
 par.nx = par.nx_inner + 2*par.nbc;      % total number of cells
 par.inner = par.nbc+1 : par.nx-par.nbc; % indices of the inner cells
-%par.inter = par.nbc : par.nx-par.nbc; 
+par.inter = par.nbc : par.nx-par.nbc; 
 %par.inter2 = par.nbc+1 : par.nx; %= par.inter+1
 
 %% ----------- Spatial settings: -----------
