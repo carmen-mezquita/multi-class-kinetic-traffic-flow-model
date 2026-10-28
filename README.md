@@ -13,7 +13,7 @@ This model is intended for research in traffic engineering, kinetic theory, and 
 
 ## Correction (October 2026)
 
-In the version used for the published article (release [`v1.0-article`](https://github.com/carmen-mezquita/multi-class-kinetic-traffic-flow-model/releases/tag/v1.0-article)), the interaction matrix in `Ac_block.m` was set to zero whenever the total density satisfied r >= R_c. This is not the model of the article, where the interaction term is used for all r < 1 and the maximal class densities R_c only enter through the equilibrium functions. It affected the results of Fig. 6.5 (Test-case 3, initial data with mean total density above R_2). All other results are unaffected.
+In the version used for the first version of the article (release [`v1.0-article`](https://github.com/carmen-mezquita/multi-class-kinetic-traffic-flow-model/releases/tag/v1.0-article)), the interaction matrix in `Ac_block.m` was set to zero whenever the total density satisfied r >= R_c. This is not the model of the article, where the interaction term is used for all r < 1 and the maximal class densities R_c only enter through the equilibrium functions. It affected the results of Fig. 6.5 (Test-case 3, initial data with mean total density above R_2). All other results are unaffected.
 
 The current version uses the interaction matrix for all r < 1. At the endpoints of the integration path with r = 1 (jam states), the matrix is evaluated at its limit along the path.
 
